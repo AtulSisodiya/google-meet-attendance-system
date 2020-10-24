@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="./binoculars.png" />
+    <title>Meet Attendance</title>
+</head>
+<body>
+    <div class="login ">
+        <h1> Bot's Information</h1>
+        <form method="POST" >
+            <label for="u">Email</label>
+            <input type="text" name="email" placeholder="Email" required="required" />
+            <label for="p">Password</label>
+            <input type="password" name="password" placeholder="Password" required="required" />
+            <label for="output">Output Folder</label>
+            <div class="folder-container">
+                <input type="text" name="output" placeholder="Output Folder" id="output" required="required" />
+                <button type="button" onclick="getDir()" class="btn btn-primary btn-block btn-large" id="folder"><img
+                        src="./folder.png" alt="folder" style="width: 16px;height: 16px;"></button>
+            </div>
+            <input type="checkbox" name="isremember" id="isremember"> Remember Information
+            <button type="submit" class="btn btn-primary btn-block btn-large" >Save</button>
+        </form>
+    </div>
+    <div class="second-slide hide">
+        <form  method="POST">
+            <label for="u">Meeting URL</label>
+            <input type="url" name="url" placeholder="Meeting URL" required="required" />
+            <label for="u">Time</label><br>
+            <div class="binder">
+                <input type="time" id="appt" name="appt" min="1" max="12"  value="00:00" required>
+            <button type="button" class="btn btn-primary btn-block btn-large" onclick="addBtn()" id="add">Add</button>
+            </div>
+            
+            <div id="time-hook">
+
+            </div>   
+            <button type="submit" class="btn btn-primary btn-block btn-large">Let's Start</button>
+           
+        </form>
+    </div>
+    <!-- <div id="loader" class="center hide"></div> -->
+    <div class="drag-container ">
+        <ul class="drag-list hide" id="drag-root">
+            
+        </ul>
+    </div>
+    <div class="final-msg hide">
+        <div class="">
+             <h1>Thank you.</h1>
+        <h4>you can close the window.</h4>
+        </div>     
+    </div>
+    
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/dragula.min.js'></script>
+    <script src="./script.js"></script>
+    <script src="/eel.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
+
+
+
+
+    
